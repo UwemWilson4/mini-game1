@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.js"></script>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="result-popup" id="popup">
+      <span class="popup-content" id="myPopup">
+        <div class="result-text" id="result-text"></div>
+        <div class="score-counter" id="score-counter">0</div>
+      </span>
+    </div>
+
+    <div class="instructions">
+      <h1>Instructions</h1>
+      <p>Use the sliders to adjust the color of the sketch on the left. Try to match the color of the sketch on the right as closely as possible. When you think you have a match, click the "Check for match" button. The closer your color is to the target color, the higher your score will be. Good luck!</p>
+    </div>
+    <div class="slide-container">
+      <!-- <h2>Range slider</h2>
+      <input type="range" min="1" max="255" value="50" class="slider" id="rangeSlider"> -->
+      <h3>Blue slider</h3>
+      <input type="range" min="1" max="255" value="120" class="slider" id="blueSlider">
+      <h3>Green slider</h3>
+      <input type="range" min="1" max="255" value="100" class="slider" id="greenSlider">
+      <h3>Red slider</h3>
+      <input type="range" min="1" max="255" value="100" class="slider" id="redSlider">
+  </div>
+    <div class="sketch-parent">
+      <div class="sketch-container" id="sketch1">
+      </div>
+      <div class="sketch-container" id="sketch2">
+      </div>
+    </div>
+
+    <button class="submit-button" onclick="checkForMatch()">
+        <h2>Check for match</h2>
+    </button>
+    
+    <script src="sketch.js"></script>
+  </body>
+</html>
